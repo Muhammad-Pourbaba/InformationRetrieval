@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IR"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Information Retrieval" Height="450" Width="800">
     <Grid>
-
+        <Button Content='Search!' Height='30' Width='80' Margin='550,25,0,0' VerticalAlignment='Top' HorizontalAlignment="Left" Click='OnClick'/>
+         <StackPanel>
+         <TextBox Height = "24" HorizontalAlignment = "Left"  Margin = "40,30,0,0" Name = "txtBox" VerticalAlignment = "Top" Width = "500" MaxLength='500'  />
+         </StackPanel>
+          <Grid>
+		<ListView Margin="40,100,40,30" Name="textlist" ></ListView>
+	    </Grid>
     </Grid>
 </Window>
