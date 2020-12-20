@@ -25,17 +25,22 @@ namespace IR
         public MainWindow()
         {
             InitializeComponent();
+            Dict newDict=new Dict();
+            
         }
 
         private void OnClick(object sender, RoutedEventArgs e)
-        {  
-            try{
-            string text =txtBox.Text;
-            Query newQ = new Query(text);
-            Thread.Sleep(10000);
-            textlist.ItemsSource=newQ.Tokens;
-        }catch(Exception ex){textlist.Items.Add(ex.Message);}
-        
+        {
+            try
+            {
+                //Dict newDict=new Dict();
+                string text = txtBox.Text;
+                Query newQ = new Query(text);
+                Thread.Sleep(5000);
+                textlist.ItemsSource = newQ.Tokens;
+            }
+            catch (Exception ex) { textlist.Items.Add(ex.Message); }
+
 
         }
     }
